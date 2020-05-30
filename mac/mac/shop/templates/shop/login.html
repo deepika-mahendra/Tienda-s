@@ -1,0 +1,75 @@
+{% extends 'shop/basic.html' %}
+{% block css %}
+.btn-style {
+    border: groove;
+    font-family: sans-serif;
+    color: #fff;
+    background-color: #5a191f;
+    border-color: #42161a;
+}
+
+
+{% endblock %}
+{% block body %}
+
+<li class="nav-item">
+          <div class="container"  style="padding-left: 0px; margin-top: 3%" >
+      <button class="btn btn-style" data-target="#mymodel"  data-toggle="modal">Login</button>
+      <div class="modal" id="mymodel">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 style="color: #5a191f;" >login</h3>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group"> 
+                  <label><i class="fas fa-envelope"></i> Email:</label>
+                  <input type="text" id="email" name="" class="form-control">
+                  <label> <i class="fas fa-key"></i> Password:</label>  
+                  <input type="text" name="" id="pass" class="form-control">
+                  
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class=" btn-style" data-dismiss="modal" onclick="validation();">sign in</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </li>
+		<li class="nav-item">
+					<div class="container" style="padding-left: 0px; margin-top: 3%">
+			<button class="btn btn-style" data-target="#mymodal" data-toggle="modal">Sign Up</button>
+			<div class="modal" id="mymodal">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 style="color: #5a191f;">Create a new account</h3>
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+						</div>
+						<div class="modal-body">
+							<form> 
+								<div class="form-group">
+									<label><i class="fas fa-user"></i> User Name:</label>
+									<input type="text" name="" class="form-control">
+									<label><i class="fas fa-envelope"></i> Email:</label>
+									<input type="text" name="" class="form-control">
+									<label><i class="fas fa-key"></i> Create Password:</label>
+									<input type="text" name="" class="form-control">
+									
+								</div>
+							</form>
+						</div>
+						<div class="modal-footer">
+							<button class=" btn-style" onclick="register()" data-dismiss="modal">sign up</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</li>
+		{% endblock %}
